@@ -1,0 +1,25 @@
+[
+	{
+		"name": "Carta 1",
+		"manaCost": 1,
+		"attackValue": 3,
+		"healthValue": 2,
+		"mechanics": ["Battlecry", "Charge"]
+	},
+	
+	{
+		"name": "Carta 2",
+		"manaCost": 1,
+		"attackValue": 3,
+		"healthValue": 2,
+		"mechanics": ["Battlecry", "Charge"]
+	},
+	
+	{
+		"name": "Carta 2",
+		"manaCost": 1,
+		"attackValue": 3,
+		"healthValue": 2,
+		"mechanics": ["Battlecry", "Charge"]
+	}
+]

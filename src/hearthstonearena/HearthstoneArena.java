@@ -19,6 +19,7 @@ public class HearthstoneArena {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         System.out.println("This is HearthStone Simulator");
         
         Hero hero1 = new Hero("Hero1");
@@ -34,6 +35,7 @@ public class HearthstoneArena {
         
         Game game = new Game(player1,player2);
         game.getPlayer1().getDeck().showDeck();
+
     }
     
 }

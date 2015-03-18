@@ -34,7 +34,9 @@ public class HearthstoneArena {
         
         
         Game game = new Game(player1,player2);
-        game.getPlayer1().getDeck().showDeck();
+        game.getCurrentPlayer().getDeck().showDeck();
+        
+        //game.play();
 
     }
     

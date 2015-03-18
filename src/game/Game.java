@@ -5,7 +5,10 @@
  */
 package game;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+import java.util.Random;
 
 /**
  *
@@ -13,10 +16,10 @@ import java.util.List;
  */
 public class Game {
 
-    private Player player1;
-    private Player player2;
+    private Queue<Player> turn;
     private List<Card> tableCardsPlayer1;
     private List<Card> tableCardsPlayer2;
+    private Boolean gameIsActive;
     // others atributes
 
     /**
@@ -26,26 +29,48 @@ public class Game {
      * @param player2 - another Player
      */
     public Game(Player player1, Player player2) {
-        this.player1 = player1;
-        this.player2 = player2;
+        turn = new LinkedList<Player>();
+        turn.add(player1);
+        turn.add(player2);
+        gameIsActive=true;
+
     }
 
     /**
-     * Return player 1
+     * Return currentPlayer
      *
-     * @return Player player1
+     * @return Player
      */
-    public Player getPlayer1() {
-        return player1;
+    public Player getCurrentPlayer() {
+        return turn.peek();
+    }
+
+  
+    public void play() {
+        // define who goes first
+        orderToPlay();
+        Player player;
+        
+        // ... do something more
+        
+        while (gameIsActive){
+           player = turn.peek();
+           player.executeAction();
+           // updated gameIsActive variable
+           
+           
+        }
     }
 
     /**
-     * Return player 2
-     *
-     * @return Player player2
+     * define which player goes first
      */
-    public Player getPlayer2() {
-        return player2;
+    private void orderToPlay() {
+        Random r = new Random();
+        Double coin = r.nextDouble();
+        if (coin > 0.5){
+          turn.add(turn.poll());
+        }
     }
 
 }

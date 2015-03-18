@@ -40,6 +40,10 @@ public class Player {
     public Deck getDeck() {
         return deck;
     }
+
+    void executeAction() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 
